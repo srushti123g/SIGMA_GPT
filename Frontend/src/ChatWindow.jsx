@@ -22,7 +22,7 @@ function ChatWindow() {
             })
         };
         try{
-            const response=await fetch("http://localhost:3000/api/chat",options);
+            const response=await fetch("https://sigma-gpt-grkq.onrender.com",options);
             const res=await response.json();
             setReply(res.reply);
             console.log(res);
