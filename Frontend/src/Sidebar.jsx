@@ -6,7 +6,7 @@ function Sidebar() {
   const {allThreads,setAllThreads,currThreadId,setNewChat,setPrompt,setReply,setCurrThreadId,setPrevChats}=useContext(MyContext);
   const getAllThreads= async()=>{
     try{
-      const response=await fetch("http://localhost:3000/api/thread");
+      const response=await fetch("https://sigma-gpt-grkq.onrender.com/api/thread");
       const res=await response.json();
       const filteredData=res.map(thread=>({
         threadId:thread.threadId,
